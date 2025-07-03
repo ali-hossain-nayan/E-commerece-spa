@@ -35,7 +35,14 @@ const products = [
     description: 'Fitness tracking and smart features in a sleek design.',
     image: 'https://www.apple.com/newsroom/images/product/watch/standard/Apple-Watch-SE-8up-hero-220907_big.jpg.large.jpg',
   },
+  {
+    title: 'Google Pixel 7 Pro',
+    price: 799,
+    description: 'Google’s flagship phone with pure Android experience and advanced AI features.',
+    image: 'https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2022/10/Pixel-7-Pro-Hazel-Close-Up-Resized.jpg',
+  }
 ];
+
 
 const seedProducts = async () => {
   try {

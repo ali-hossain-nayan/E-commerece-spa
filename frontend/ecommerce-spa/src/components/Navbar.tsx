@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
 const Navbar: React.FC = () => {
-  const { cartItems } = useCart();
+  const { cartItems, setIsCartOpen } = useCart();
 
   return (
     <nav className="bg-purple-200 shadow-md px-6 py-4 flex justify-between items-center">
@@ -11,10 +11,13 @@ const Navbar: React.FC = () => {
         <Link to="/">E-Shop</Link>
       </div>
       <div className="flex gap-6 text-gray-700 text-lg">
-        <Link to="/" className="hover:text-blue-600">Home</Link>
-        <Link to="#" onClick={(e) => e.preventDefault()} className="hover:text-blue-600">
+        <Link to="/" className="hover:text-purple-600 cursor-pointer">Home</Link>
+        <button
+          onClick={() => setIsCartOpen(true)}
+          className="hover:text-purple-600 cursor-pointer"
+        >
           Cart ({cartItems.length})
-        </Link>
+        </button>
       </div>
     </nav>
   );
