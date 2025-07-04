@@ -13,7 +13,7 @@ const ProductDetail: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`https://mini-e-commerece-spa.onrender.com/api/products/${id}`)
       .then((res) => setProduct(res.data))
       .catch(console.error);
   }, [id]);
